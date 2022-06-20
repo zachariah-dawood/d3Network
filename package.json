@@ -1,0 +1,36 @@
+{
+  "name": "dddnetwork",
+  "widgetName": "DDDNetwork",
+  "version": "1.0.0",
+  "description": "My widget description",
+  "copyright": "© Mendix Technology BV 2022. All rights reserved.",
+  "author": "zack",
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "Apache-2.0",
+  "config": {
+    "projectPath": "C:\\\\UserData\\\\z004k1jb\\\\Documents\\\\Mendix\\\\testingd3",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "siemens",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "d3": "^5.5.0",
+    "react": "^16.4.1",
+    "react-d3-graph": "^2.6.0"
+  }
+}
