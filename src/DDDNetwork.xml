@@ -44,9 +44,17 @@
                 <attributeType name="String"/>
             </attributeTypes>
             </property>
-            <property key="directed" type="integer" defaultValue="0">
+            <property key="directed" type="boolean" defaultValue="false">
                 <caption>Directed?</caption>
                 <description/>
+            </property>
+            <property key="linkClick" type="action" dataSource="links">
+                <caption>On link click</caption>
+                <description>Action to be performed when link is clicked</description>
+            </property>
+            <property key="nodeClick" type="action" dataSource="nodes">
+                <caption>On node click</caption>
+                <description>Action to be performed when node is clicked</description>
             </property>
         </propertyGroup>
     </properties>

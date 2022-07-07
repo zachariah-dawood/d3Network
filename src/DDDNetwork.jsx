@@ -13,8 +13,8 @@ const data = {
   };
 
   var w = innerWidth;
-  const Config = {
-    directed: true,
+  var Config = {
+    directed: false,
     panAndZoom: true,
     width: w,
     collapsible: true,
@@ -48,7 +48,7 @@ export class DDDNetwork extends Component {
         var nodesinfo = new Array();
         for(let i = 0; i < this.props.nodes.items.length; i++){
           let newObj = {};
-          newObj.id = this.props.nodeName.get(this.props.nodes.items[i]).displayValue;
+          newObj.id = this.props.nodeName.get(this.props.nodes.items[i]).displayValue.trim();
           nodesinfo.push(newObj);
         }
         info.nodes = nodesinfo;
@@ -58,11 +58,12 @@ export class DDDNetwork extends Component {
         var linksinfo = new Array();
         for(let j = 0; j < this.props.links.items.length; j++){
           let newerObj = {};
-          newerObj.source = this.props.linkSourceID.get(this.props.links.items[j]).displayValue;
-          newerObj.target = this.props.linkTargetID.get(this.props.links.items[j]).displayValue;
+          newerObj.source = this.props.linkSourceID.get(this.props.links.items[j]).displayValue.trim();
+          newerObj.target = this.props.linkTargetID.get(this.props.links.items[j]).displayValue.trim();
           linksinfo.push(newerObj);
         }
         info.links = linksinfo;
+        Config.directed = this.props.directed;
         return <Graph
         id="graph-id"
         data={info}
