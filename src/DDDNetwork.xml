@@ -26,6 +26,18 @@
                     <attributeType name="String"/>
                 </attributeTypes>
             </property>
+            <property key="nodeColor" type="string" defaultValue="lightgreen" required="true">
+	            <caption>Node color</caption>
+	            <description />
+            </property>
+            <property key="hlStrokeColor" type="string" defaultValue="blue" required="true">
+	            <caption>Highlight stroke color</caption>
+	            <description />
+            </property>
+            <property key="nodeSize" type="integer" defaultValue="1">
+	            <caption>Node size</caption>
+	            <description/>
+            </property>
             <property key="links" type="datasource" isList="true" required="false">
                 <caption>Link</caption>
                 <description/>

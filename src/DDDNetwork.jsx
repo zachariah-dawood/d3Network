@@ -28,7 +28,7 @@ const data = {
       highlightColor: "lightblue",
     },
     d3: {
-      gravity: -100,
+      charge: -100,
     }
   };
   
@@ -55,6 +55,7 @@ export class DDDNetwork extends Component {
         // the links get very upset if there's a typo. If you're getting a 
         // "you provided a [sic] invalid data structure" error, make sure that 
         // all your source and target ids match their node names 
+        // error handling is in the works
         var linksinfo = new Array();
         for(let j = 0; j < this.props.links.items.length; j++){
           let newerObj = {};
@@ -65,6 +66,9 @@ export class DDDNetwork extends Component {
         info.links = linksinfo;
         Config.directed = this.props.directed;
         Config.collapsible = this.props.collapsible;
+        Config.node.color = this.props.nodeColor;
+        Config.node.highlightStrokeColor = this.props.hlStrokeColor;
+        Config.node.size = this.props.nodeSize * 120;
         return <Graph
         id="graph-id"
         data={info}
