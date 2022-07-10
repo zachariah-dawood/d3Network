@@ -64,6 +64,7 @@ export class DDDNetwork extends Component {
         }
         info.links = linksinfo;
         Config.directed = this.props.directed;
+        Config.collapsible = this.props.collapsible;
         return <Graph
         id="graph-id"
         data={info}

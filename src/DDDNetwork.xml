@@ -48,6 +48,10 @@
                 <caption>Directed?</caption>
                 <description/>
             </property>
+            <property key="collapsible" type="boolean" defaultValue="false">
+                <caption>Collapsible?</caption>
+                <description/>
+            </property>
             <property key="linkClick" type="action" dataSource="links">
                 <caption>On link click</caption>
                 <description>Action to be performed when link is clicked</description>
